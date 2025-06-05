@@ -1,5 +1,6 @@
+
 :host {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
   color: #333;
   box-sizing: border-box;
@@ -7,454 +8,89 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.carousel {
-  width: 100vw;
-  height: 500px; /* Ajusta según necesidad */
+.content {
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+  max-width: 960px;
+  margin: 82px auto 32px;
+  padding: 0 16px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  overflow: hidden; /* Evita que sobresalgan elementos */
-  position: relative;
-  margin-bottom: 50px; 
-}
-
-.slides {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.slide {
-  min-width: 100%;
-  transition: transform 0.5s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.slide img {
-  width: 100vw;
-  height: 100%;
-  object-fit: contain; /* Muestra toda la imagen sin recortarla */
-  background-color: black; /* Rellena el espacio sobrante si la imagen no cubre todo */
 }
 
 
-.caption {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px 20px;
-  color: white;
-  text-align: center;
-  border-radius: 5px;
-}
-
-
-/* Navbar */
-.navbar {
-  margin-bottom: 0;
-  padding: 10px 40px; /* Aumenté el padding para mayor separación */
-  background: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 80px; /* Ajusta la altura de la barra */
-}
-
-/* Contenedor general del navbar */
-.navbar-container {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Espacio entre el logo y el texto */
-}
-
-.logo {
-  height: 40px; /* Ajusta el tamaño según lo necesites */
-  width: auto; /* Mantiene la proporción */
-}
-
-
-.title {
-  font-size: 22px;
-  font-weight: bold;
-  color: #f89b05;
-}
-
-/* Menú centrado */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px; /* Aumenta el espacio entre elementos */
-  margin: 0 auto; /* Centra el menú */
-  padding: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #1d3557;
-  font-weight: bold;
-  transition: color 0.3s ease;
-  font-size: 16px;
-}
-
-.nav-links a:hover {
-  color: #950606;
-}
-
-/* Sección de contacto alineada a la derecha */
-.contact-info {
-  text-align: right;
-  font-size: 14px;
-  color: red;
-  font-weight: bold;
-}
-
-
-
-
-/* 🏢 Carrusel de Logos */
-.logo-carousel {
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.logo-img {
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
   height: 60px;
-  object-fit: contain;
-}
-
-
-.timeline-container {
-  background-image: url('/assets/sst.jpeg');
-
-  background-size: cover; /* Ajusta la imagen para cubrir toda el área */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita repeticiones */
-  padding: 50px 0; /* Ajusta el espacio interno */
-  color: white; /* Ajusta el color del texto si es necesario */
-  margin-top: 50px; 
-}
-
-
-.timeline {
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  max-width: 1200px;
-  margin: auto;
-  position: relative;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 50%;
+.whatsapp-float:hover {
+  background-color: #128c3e;
+}
+.top-bar {
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 2px;
-  background: gray;
-  transform: translateY(-50%);
+  background-color: #7bb730;
+  color: white;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  z-index: 1050;
+  transition: top 0.3s ease;
 }
 
-.timeline-item {
-  text-align: center;
-  position: relative;
-  z-index: 10;
+.top-bar.hidden {
+  top: -40px; /* oculta la barra hacia arriba */
 }
 
-.stat-number {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.stat-text {
-  color: #ccc;
-}
-
-.services {
-  text-align: center;
-  padding: 40px;
-  background-color: white;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.top-bar-content {
+  display: flex;
   gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
-
-.service-card {
-  width: 300px;
-  height: 350px;
-  perspective: 1000px;
-}
-
-.card-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.card-inner.flipped {
-  transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 15px;
-  border-radius: 10px;
 }
 
-.card-front {
-  background:rgba(20, 86, 165, 0.9);
+.top-link {
   color: white;
-}
-
-.card-back {
-  background:rgba(20, 86, 165, 0.9);
-  color: white;
-  transform: rotateY(180deg);
-  border: 2px solid rgb(6, 6, 159);
-}
-
-.card-title {
+  text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.card-title .icon {
-  width: 40px;
-  height: 40px;
-}
-
-.card-image {
-  width: 50%; /* Reduce el tamaño sin distorsionar */
-  height: auto; /* Mantiene la proporción */
-  display: block;
-  margin: 0 auto; /* Centra la imagen */
-}
-.about-us {
-  position: relative;
-  background-image: url('/assets/linea.jpeg');
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-.about-us2 {
-  position: relative;
-  background-image: url('/assets/linea.jpeg');
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.overlay {
-  background: rgba(0, 0, 0, 0.6); /* Oscurecer fondo para mejorar legibilidad */
-  padding: 40px;
-}
-
-.content {
-  margin-bottom: 20px;
-}
-
-.icon {
-  width: 50px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.columns {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 20px;
-}
-
-.columns .content {
-  flex: 1;
-  max-width: 500px;
-}
-
-.columns h2 {
-  margin-top: 20px; /* Baja la posición de "VISIÓN" */
-  margin-bottom: 5px; /* Reduce la separación con el párrafo */
-}
-
-.columns p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Ajustes específicos para reducir espacio entre "VISIÓN" y "MISIÓN" */
-.columns .content:nth-child(1) {
-  margin-bottom: -10px; /* Reduce el espacio debajo de "VISIÓN" */
-}
-
-.columns .content:nth-child(2) {
-  margin-top: -10px; /* Junta un poco más "MISIÓN" con "VISIÓN" */
-}
-
-
-.btn {
-  background-color: #165dd9;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background-color: #0d47a1;
-}
-footer {
-  background-color: #0a1f44; /* Azul oscuro */
-  color: white;
-  padding: 40px 20px;
+  gap: 6px;
   font-size: 14px;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  
-  /* Cambia flexbox por grid para forzar 3 columnas */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  align-items: start;
-  text-align: left;
+.top-link:hover {
+  text-decoration: underline;
 }
 
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* Para que el mat-toolbar baje y no quede oculto tras la top-bar */
+.mega-toolbar {
+  margin-top: 35px;
+  transition: margin-top 0.3s ease;
 }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 12px;
+/* Cuando top-bar está oculta, mat-toolbar sube */
+.top-bar.hidden + .mega-toolbar {
+  margin-top: 0;
 }
-.social-icons {
-  display: flex;
-  gap: 10px; /* Espaciado entre los iconos */
-}
-
-.social-icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 35px; /* Tamaño del icono */
-  height: 35px;
-  border-radius: 50%; /* Forma circular */
-  background-color: white; /* Fondo blanco */
-  color: #0a1f44; /* Color azul oscuro */
-  text-decoration: none;
-  font-size: 18px;
-  transition: background 0.3s, color 0.3s;
-}
-
-.social-icon:hover {
-  background-color: #f8b400; /* Amarillo al pasar el mouse */
-  color: white;
-}
-
-.stat-icon {
-  width: 50px; /* Ajusta el tamaño según necesidad */
-  height: 50px;
-  object-fit: contain; /* Para mantener la proporción */
-}
-.stat-label {
-  color: white;
-}
-.stat-text {
-  color: white;  /* Hace el texto blanco */
-  font-weight: bold; /* Opcional: hace el texto más visible */
-  text-align: center; /* Centra el texto debajo del icono */
-}
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .contact-info {
-    text-align: center;
-  }
-
-  .carousel {
-    height: 300px; /* Reduce la altura en móviles */
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .columns {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .footer-column {
-    align-items: center;
-  }
-}
-

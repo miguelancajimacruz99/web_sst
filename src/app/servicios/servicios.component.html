@@ -1,0 +1,13 @@
+<section class="blog-section">
+  <h1>Servicios</h1>
+  <p>Conoce nuestros servicios especializados en seguridad industrial y salud en el trabajo.</p>
+
+  <div class="blog-posts">
+    <article *ngFor="let service of services" class="blog-post">
+      <img [src]="service.image" alt="{{service.title}}" class="blog-image" />
+      <h2>{{ service.title }}</h2>
+      <p>{{ service.description }}</p>
+      <a href="#" class="read-more">Más información →</a>
+    </article>
+  </div>
+</section>

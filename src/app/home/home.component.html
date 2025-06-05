@@ -1,0 +1,75 @@
+<div class="video-background-container">
+
+    <video #videoElement loop playsinline class="video-background">
+      <source src="assets/video.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+  
+    <button *ngIf="mostrarBoton" (click)="reproducirConSonido()" class="btn-reproducir">
+      ▶️ Reproducir con sonido
+    </button>
+    
+
+  <div class="video-title">
+    <h1>PROFESIONALES BUSCANDO SOLUCIONES CONFIABLES</h1>
+    <a routerLink="/nosotros" class="btn-info">Más Información »</a>
+  </div>
+
+  <div class="video-content">
+  </div>
+</div>
+<footer id="contacto">
+  <div class="container">
+    <!-- Columna 1: Logo y descripción -->
+    <div class="footer-column footer-logo">
+      <h2>Gassi Peru</h2>
+      <p>
+        Somos una empresa consultora dedicada al asesoramiento de: Sistemas de Gestión, Seguridad Laboral, Capacitación y entrenamiento especializado en Seguridad Laboral.
+      </p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61571160096362" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Columna 2: Contacto -->
+    <div class="footer-column">
+      <h3>Contáctanos</h3>
+      <p><i class="fas fa-envelope"></i> gassiperu@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +51 922 124 116 | +51 912 303 353</p>
+      <p><i class="fas fa-map-marker-alt"></i> Piura</p>
+      <p><i class="fas fa-clock"></i> 09:00 am - 06:00 pm</p>
+    </div>
+
+    <!-- Columna 3: Mapa del sitio -->
+    <div class="footer-column">
+      <h3>Mapa del Sitio</h3>
+      <ul>
+        <li>Conócenos</li>
+        <li>Blog</li>
+        <li>Contacto</li>
+        <li>Política de calidad</li>
+      </ul>
+    </div>
+
+    <!-- Columna 4: Servicios -->
+    <div class="footer-column">
+      <h3>Servicios</h3>
+      <ul>
+        <li>Capacitaciones en trabajos de alto riesgo</li>
+        <li>Cursos de gestión en seguridad y salud en el trabajo</li>
+      </ul>
+      <div class="reclamaciones">
+        <strong>Libro de reclamaciones</strong>
+        <img src="assets/libroblanco.png" alt="Libro de reclamaciones" />
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p><strong>Gassi Peru</strong> &copy; Todos los derechos reservados</p>
+    <p style="float:right;">Diseñado por <strong>Miguel Ancajima</strong></p>
+  </div>
+</footer>

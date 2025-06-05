@@ -1,0 +1,70 @@
+<div class="top-bar" [class.hidden]="hideTopBar">
+  <div class="top-bar-content">
+    <span><i class="fas fa-phone-alt"></i> 923496245</span>
+    <a [href]="pdfSrc" download class="top-link"><i class="fas fa-book"></i> Catalog</a>
+    <a routerLink="/contacto" class="top-link"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+</div>
+
+<mat-toolbar color="primary" class="mega-toolbar">
+    <button mat-icon-button (click)="toggleDrawer()" class="hamburger" aria-label="Toggle menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+  
+    <div class="logo">
+        <img src="assets/logogasifinal.png" alt="Logo" class="logo-img" />
+        <span style="
+        color: #a10000;
+        font-family: 'Dancing Script';
+        font-weight: 700;
+        font-size: 32px;
+        letter-spacing: 1.5px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        text-transform: capitalize;
+      ">
+        Gassi Peru
+      </span>
+      
+      
+      
+        
+        
+      </div>
+      
+  
+    <span class="spacer"></span>
+  
+    <nav class="menu-desktop">
+      <a routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+      <a routerLink="/nosotros" routerLinkActive="active-link">Nosostros</a>
+      <a routerLink="/servicios" routerLinkActive="active-link">Servicios</a>
+      <a routerLink="/conmmunity" routerLinkActive="active-link">Community</a>
+      <a routerLink="/contacto" routerLinkActive="active-link">Contacto</a>
+      <a routerLink="/certificado" routerLinkActive="active-link">Certificados</a>
+      <a routerLink="/blog" routerLinkActive="active-link">Blog</a>
+    </nav>
+    
+  
+    <a routerLink="/contacto" class="btn-aula">Aula virtual</a>
+  </mat-toolbar>
+  
+  <mat-sidenav-container class="example-container" style="height: 100vh;">
+<mat-sidenav #drawer mode="over" class="mobile-sidenav" disableClose>
+    <mat-nav-list>
+        <a mat-list-item routerLink="/home" (click)="drawer.close()" >Inicio</a>
+        <a mat-list-item routerLink="/nosotros" (click)="drawer.close()">Nosotros</a>
+      <a mat-list-item routerLink="/servicios" (click)="drawer.close()">Servicios</a>
+      <a mat-list-item routerLink="/conmmunity" (click)="drawer.close()">Community</a>
+      <a mat-list-item routerLink="/contacto" (click)="drawer.close()">Contacto</a>
+      <a mat-list-item routerLink="/certificado" (click)="drawer.close()">Certificados</a>
+      <a mat-list-item routerLink="/blog" (click)="drawer.close()">Blog</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

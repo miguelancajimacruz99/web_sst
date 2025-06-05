@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+.card-container2 {
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 12px;
+
+}
+.carousel-single {
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-single img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+
+  animation: slide-left 30s linear infinite;
+}
+.video-background-container {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+.video-title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7); /* fondo negro opaco */
+  padding: 40px 60px;
+  border-radius: 15px;
+  z-index: 2;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0,0,0,0.9);
+}
+
+.video-title p {
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin-top: 10px;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #ddd;
+}
+
+.video-title a.btn-info {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #a10000;
+  color: white;
+  font-weight: 600;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(161, 0, 0, 0.6);
+}
+
+.video-title a.btn-info:hover {
+  background-color: #000000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Opcional: estilos para texto adicional */
+.video-content {
+  position: relative;
+  z-index: 3;
+  /* otros estilos */
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  padding: 50px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: left;
+  align-items: start;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-column h3, .footer-logo h2 {
+  border-bottom: 2px solid #a10000;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.footer-column p, .footer-column li {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: white;
+  color: #0a1f44;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color:#a10000;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.reclamaciones {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.reclamaciones img {
+  width: 80px;
+  margin-top: 5px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+.btn-reproducir {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 10;
+
+  padding: 12px 24px;
+  font-size: 17px;
+  font-weight: 500;
+  border: none;
+  border-radius: 16px;
+
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo translúcido tipo iOS */
+  color: #ffffff;
+
+  backdrop-filter: blur(6px); /* efecto blur tipo iOS */
+  -webkit-backdrop-filter: blur(6px);
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-reproducir:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+  transform: scale(1.03);
+}
